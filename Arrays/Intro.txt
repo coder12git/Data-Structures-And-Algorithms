@@ -1,0 +1,32 @@
+ Based on size of input an Array can be classified as -
+
+1. Fixed Size Array
+2. Dynamic size Array
+
+In C++, the differebt array notation are-
+
+int arr[100] - Stack allocated
+int arr[n]   - Stack allocated
+int *arr = new int[n] - Heap allocated
+int arr = {10,20,30,40} - Stack allocated
+
+Stack and heap are the two ways of allocating memory.
+In stack local variables are stored and in heap dynamic variables are stored.
+
+In Java, memory are allocated in heap.
+
+It is recommended in any language to use Dynamic Size Array over Fixed size array.
+
+Therefore, In C++ - Vector is used in place of fixed size array
+           In Java - Array List
+           In Python - List
+
+
+When we pass array as a argument in any function, then it's pointer is passed and that is why 
+we need length as other argument otherwise if we want length of array we will get it's pointer 
+length inside function.
+
+int func(int arr[], int n){}; -> Here int arr[] is actually int *arr (i.e. pointer)
+
+But, in vector don't need to pass it's length
+int func(vector <int> v){}; -> Using v.size() inside function, we can find it's length
